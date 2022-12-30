@@ -1,0 +1,11 @@
+composer create-project laravel/laravel="6.4.0" --prefer-dist
+
+composer require laravel/ui="1.1.1" --dev
+
+php artisan ui vue
+
+npm install
+
+npm run dev
+
+npm install vue-router@2
