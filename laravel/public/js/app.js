@@ -1949,11 +1949,15 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("router-link", {
     attrs: {
-      to: "/"
+      to: {
+        name: "home"
+      }
     }
   }, [_vm._v("Home")]), _vm._v(" "), _c("router-link", {
     attrs: {
-      to: "/second"
+      to: {
+        name: "second"
+      }
     }
   }, [_vm._v("Second")]), _vm._v(" "), _c("router-view")], 1);
 };
