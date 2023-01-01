@@ -1916,6 +1916,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     console.log(this.itemTitle);
+    // Uncomment to see why modifying prop is a bad idea!
+    // this.itemTitle = "New title";
+    // setTimeout(() => {
+    //   this.itemTitle = "New title";
+    // }, 1500);
   }
 });
 
@@ -1938,14 +1943,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      bookable1: {
-        title: "Cheap Villa !!!",
-        content: "A very cheap villa"
-      },
-      bookable2: {
-        title: "Cheap Villa 2",
-        content: "A very cheap villa 2"
-      }
+      bookable1: null,
+      bookable2: null
     };
   },
   // beforeCreate() {
@@ -1957,9 +1956,27 @@ __webpack_require__.r(__webpack_exports__);
     console.log(this.bookable1);
     console.log(this.bookable2);
     setTimeout(function () {
-      _this.bookable1.title = "Expensive Villa";
-      _this.bookable2.title = "Very Expensive Villa";
+      _this.bookable1 = {
+        title: "Cheap Villa !!!",
+        content: "A very cheap villa"
+      };
+      _this.bookable2 = {
+        title: "Cheap Villa 2",
+        content: "A very cheap villa 2"
+      };
+      _this.bookable3 = {
+        title: "Expensive villa",
+        content: "A very cheap villa 3"
+      };
     }, 5000);
+    setTimeout(function () {
+      console.log("First change");
+      _this.bookable1.title = "You will see this!";
+    }, 8000);
+    setTimeout(function () {
+      console.log("Second change");
+      _this.bookable3.title = "You wont see this!";
+    }, 12000);
   } // beforeMount() {
   //   console.log("before mount");
   // },
@@ -2079,6 +2096,12 @@ var render = function render() {
     attrs: {
       "item-title": _vm.bookable2.title,
       "item-content": _vm.bookable2.content,
+      price: 1500
+    }
+  }), _vm._v(" "), _c("bookable-list-item", {
+    attrs: {
+      "item-title": _vm.bookable3.title,
+      "item-content": _vm.bookable3.content,
       price: 1500
     }
   })], 1);

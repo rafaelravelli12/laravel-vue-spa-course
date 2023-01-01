@@ -10,6 +10,11 @@
 		props: { itemTitle: String, itemContent: String, price: Number },
 		mounted() {
 			console.log(this.itemTitle);
+			// Uncomment to see why modifying prop is a bad idea!
+			// this.itemTitle = "New title";
+			// setTimeout(() => {
+			//   this.itemTitle = "New title";
+			// }, 1500);
 		}
 	};
 </script>
