@@ -1948,13 +1948,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   // beforeCreate() {
-  //   console.log("before create");
+  // console.log("before create");
   // },
   created: function created() {
     var _this = this;
-    console.log("created");
-    console.log(this.bookable1);
-    console.log(this.bookable2);
     setTimeout(function () {
       _this.bookable1 = {
         title: "Cheap Villa !!!",
@@ -1964,31 +1961,19 @@ __webpack_require__.r(__webpack_exports__);
         title: "Cheap Villa 2",
         content: "A very cheap villa 2"
       };
-      _this.bookable3 = {
-        title: "Expensive villa",
-        content: "A very cheap villa 3"
-      };
-    }, 5000);
-    setTimeout(function () {
-      console.log("First change");
-      _this.bookable1.title = "You will see this!";
-    }, 8000);
-    setTimeout(function () {
-      console.log("Second change");
-      _this.bookable3.title = "You wont see this!";
-    }, 12000);
+    }, 2000);
   } // beforeMount() {
-  //   console.log("before mount");
+  // console.log("before mount");
   // },
   // mounted() {
-  //   console.log("mounted");
+  // 	console.log("mounted");
   // },
   // beforeDestroy() {
-  //   console.log("before destroy");
+  // 	console.log("before destroy");
   // },
   // destroyed() {
-  //   console.log("destroyed");
-  // }
+  // 	console.log("destroyed");
+  // },
 });
 
 /***/ }),
@@ -2086,25 +2071,19 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_c("bookable-list-item", {
+  return _c("div", [_vm.bookable1 ? _c("bookable-list-item", {
     attrs: {
       "item-title": _vm.bookable1.title,
       "item-content": _vm.bookable1.content,
       price: 1000
     }
-  }), _vm._v(" "), _c("bookable-list-item", {
+  }) : _vm._e(), _vm._v(" "), _vm.bookable2 ? _c("bookable-list-item", {
     attrs: {
       "item-title": _vm.bookable2.title,
       "item-content": _vm.bookable2.content,
       price: 1500
     }
-  }), _vm._v(" "), _c("bookable-list-item", {
-    attrs: {
-      "item-title": _vm.bookable3.title,
-      "item-content": _vm.bookable3.content,
-      price: 1500
-    }
-  })], 1);
+  }) : _vm._e()], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -53114,8 +53093,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\project.44.laravel.vue.spa.course\laravel.vue.spa.course\laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\project.44.laravel.vue.spa.course\laravel.vue.spa.course\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\project.51.laravel.vue.spa.course.my.version\laravel.vue.spa.course\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\project.51.laravel.vue.spa.course.my.version\laravel.vue.spa.course\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
