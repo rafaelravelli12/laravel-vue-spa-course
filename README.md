@@ -1,4 +1,4 @@
-# laravel.vue.spa.course
+# laravel-vue-spa-course
 
 ### Estimeed Sirs,
 
